@@ -1,14 +1,9 @@
 #include "stm32f10x.h"
 #include "Buzzer.h"
 
-/**
-  * Function : Buzzer initialization
-  * Arguments: none
-  * Returns  : none
-  * Note     : Configures PA3 as push-pull output for active-low buzzer.
-  *            Buzzer OFF by default on init.
-  *            Hardware: buzzer I/O pin -> PA3, VCC -> 3.3V, GND -> GND.
-  */
+static uint8_t alert_active = 0;
+static uint16_t alert_counter = 0;
+
 void Buzzer_Init(void)
 {
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
@@ -19,21 +14,40 @@ void Buzzer_Init(void)
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);
 
-	GPIO_SetBits(GPIOA, GPIO_Pin_3);    // Default OFF (active-low: HIGH = off)
+	GPIO_SetBits(GPIOA, GPIO_Pin_3);
 }
 
-/**
-  * Function : Turn buzzer on (pull low to activate)
-  */
 void Buzzer_ON(void)
 {
 	GPIO_ResetBits(GPIOA, GPIO_Pin_3);
 }
 
-/**
-  * Function : Turn buzzer off (pull high to deactivate)
-  */
 void Buzzer_OFF(void)
 {
 	GPIO_SetBits(GPIOA, GPIO_Pin_3);
+}
+
+/* Start continuous alert beeping — driven by Buzzer_Tick */
+void Buzzer_Alert_Start(void)
+{
+	alert_active  = 1;
+	alert_counter = 0;
+}
+
+/* Stop alert beeping */
+void Buzzer_Alert_Stop(void)
+{
+	alert_active = 0;
+	Buzzer_OFF();
+}
+
+/* Call from TIM2 IRQ every 1ms — produces 150ms on / 150ms off beep pattern */
+void Buzzer_Tick(void)
+{
+	if (!alert_active) return;
+
+	alert_counter++;
+	if      (alert_counter < 150)  Buzzer_ON();
+	else if (alert_counter < 300)  Buzzer_OFF();
+	else                           alert_counter = 0;
 }

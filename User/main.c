@@ -71,6 +71,7 @@ void TIM2_IRQHandler(void)
 		StopWatch_Tick();
 		Dino_Tick();
 		Countdown_Tick();
+		Buzzer_Tick();
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	}
 }

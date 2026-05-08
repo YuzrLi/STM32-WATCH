@@ -37,6 +37,7 @@
 .\objects\menu.o: Hardware\menu.h
 .\objects\menu.o: Hardware\Countdown.h
 .\objects\menu.o: Hardware\Buzzer.h
+.\objects\menu.o: Hardware\RGB.h
 .\objects\menu.o: .\System\Delay.h
 .\objects\menu.o: E:\Keil5\ARM\ARMCC\Bin\..\include\math.h
 .\objects\menu.o: Hardware\dino.h

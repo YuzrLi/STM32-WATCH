@@ -879,7 +879,7 @@ F (.\Hardware\OLED_Data.c)(0x69FD4D8F)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=in
 I (Hardware\OLED_Data.h)(0x69E96F5C)
 I (E:\Keil5\ARM\ARMCC\include\stdint.h)(0x588B4B04)
 F (.\Hardware\OLED_Data.h)(0x69E96F5C)()
-F (.\Hardware\menu.c)(0x69FD58CC)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-I.\RTE\_Target_1-IE:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\menu.o --omf_browse .\objects\menu.crf --depend .\objects\menu.d)
+F (.\Hardware\menu.c)(0x69FDCDF2)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-I.\RTE\_Target_1-IE:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\menu.o --omf_browse .\objects\menu.crf --depend .\objects\menu.d)
 I (.\Start\stm32f10x.h)(0x4D780474)
 I (.\Start\core_cm3.h)(0x4D520318)
 I (E:\Keil5\ARM\ARMCC\include\stdint.h)(0x588B4B04)
@@ -916,7 +916,8 @@ I (Hardware\LED.h)(0x6849FFBE)
 I (Hardware\SetTime.h)(0x68426CE4)
 I (Hardware\menu.h)(0x69E968C6)
 I (Hardware\Countdown.h)(0x69FD4D47)
-I (Hardware\Buzzer.h)(0x69FD4D3B)
+I (Hardware\Buzzer.h)(0x69FDCDD7)
+I (Hardware\RGB.h)(0x69FD5724)
 I (.\System\Delay.h)(0x613059CE)
 I (E:\Keil5\ARM\ARMCC\include\math.h)(0x588B4B04)
 I (Hardware\dino.h)(0x684FB9D6)
@@ -1147,7 +1148,7 @@ I (.\Library\stm32f10x_usart.h)(0x4D780374)
 I (.\Library\stm32f10x_wwdg.h)(0x4D780374)
 I (.\Library\misc.h)(0x4D780374)
 F (.\Hardware\AD.h)(0x625A4C90)()
-F (.\Hardware\Thermistor.c)(0x69E96868)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-I.\RTE\_Target_1-IE:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\thermistor.o --omf_browse .\objects\thermistor.crf --depend .\objects\thermistor.d)
+F (.\Hardware\Thermistor.c)(0x69FDCD43)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-I.\RTE\_Target_1-IE:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\thermistor.o --omf_browse .\objects\thermistor.crf --depend .\objects\thermistor.d)
 I (.\Start\stm32f10x.h)(0x4D780474)
 I (.\Start\core_cm3.h)(0x4D520318)
 I (E:\Keil5\ARM\ARMCC\include\stdint.h)(0x588B4B04)
@@ -1178,7 +1179,7 @@ I (.\Library\stm32f10x_wwdg.h)(0x4D780374)
 I (.\Library\misc.h)(0x4D780374)
 I (Hardware\AD.h)(0x625A4C90)
 I (E:\Keil5\ARM\ARMCC\include\math.h)(0x588B4B04)
-F (.\Hardware\Buzzer.c)(0x69FD571F)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-I.\RTE\_Target_1-IE:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\buzzer.o --omf_browse .\objects\buzzer.crf --depend .\objects\buzzer.d)
+F (.\Hardware\Buzzer.c)(0x69FDCDE2)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-I.\RTE\_Target_1-IE:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\buzzer.o --omf_browse .\objects\buzzer.crf --depend .\objects\buzzer.d)
 I (.\Start\stm32f10x.h)(0x4D780474)
 I (.\Start\core_cm3.h)(0x4D520318)
 I (E:\Keil5\ARM\ARMCC\include\stdint.h)(0x588B4B04)
@@ -1207,7 +1208,7 @@ I (.\Library\stm32f10x_tim.h)(0x4D780374)
 I (.\Library\stm32f10x_usart.h)(0x4D780374)
 I (.\Library\stm32f10x_wwdg.h)(0x4D780374)
 I (.\Library\misc.h)(0x4D780374)
-I (Hardware\Buzzer.h)(0x69FD4D3B)
+I (Hardware\Buzzer.h)(0x69FDCDD7)
 F (.\Hardware\Countdown.c)(0x69FD5753)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-I.\RTE\_Target_1-IE:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\countdown.o --omf_browse .\objects\countdown.crf --depend .\objects\countdown.d)
 I (.\Start\stm32f10x.h)(0x4D780474)
 I (.\Start\core_cm3.h)(0x4D520318)
@@ -1240,7 +1241,7 @@ I (.\Library\misc.h)(0x4D780374)
 I (Hardware\OLED.h)(0x69E96F59)
 I (Hardware\OLED_Data.h)(0x69E96F5C)
 I (Hardware\Key.h)(0x6854EB02)
-I (Hardware\Buzzer.h)(0x69FD4D3B)
+I (Hardware\Buzzer.h)(0x69FDCDD7)
 I (Hardware\RGB.h)(0x69FD5724)
 I (Hardware\Countdown.h)(0x69FD4D47)
 F (.\Hardware\RGB.c)(0x69FD58C0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-I.\RTE\_Target_1-IE:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\rgb.o --omf_browse .\objects\rgb.crf --depend .\objects\rgb.d)
@@ -1273,7 +1274,7 @@ I (.\Library\stm32f10x_usart.h)(0x4D780374)
 I (.\Library\stm32f10x_wwdg.h)(0x4D780374)
 I (.\Library\misc.h)(0x4D780374)
 I (Hardware\RGB.h)(0x69FD5724)
-F (.\User\main.c)(0x69FD575E)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-I.\RTE\_Target_1-IE:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\User\main.c)(0x69FDCE02)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\Library -I .\User -I .\System -I .\Hardware --no-multibyte-chars-I.\RTE\_Target_1-IE:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-IE:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (.\Start\stm32f10x.h)(0x4D780474)
 I (.\Start\core_cm3.h)(0x4D520318)
 I (E:\Keil5\ARM\ARMCC\include\stdint.h)(0x588B4B04)
@@ -1309,7 +1310,7 @@ I (.\Hardware\menu.h)(0x69E968C6)
 I (.\System\Timer.h)(0x61F0E556)
 I (.\Hardware\Key.h)(0x6854EB02)
 I (.\Hardware\dino.h)(0x684FB9D6)
-I (.\Hardware\Buzzer.h)(0x69FD4D3B)
+I (.\Hardware\Buzzer.h)(0x69FDCDD7)
 I (.\Hardware\Countdown.h)(0x69FD4D47)
 I (.\Hardware\RGB.h)(0x69FD5724)
 F (.\User\stm32f10x_conf.h)(0x69E96F81)()

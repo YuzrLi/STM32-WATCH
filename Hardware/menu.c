@@ -7,6 +7,7 @@
 #include "menu.h"
 #include "Countdown.h"
 #include "Buzzer.h"
+#include "RGB.h"
 /* #include "MPU6050.h" */ /* Uncomment when MPU6050 module is present */
 #include "Delay.h"
 #include <math.h>
@@ -637,35 +638,60 @@ int Emoji(void)
 
 /*----------------------------------Temperature-------------------------------------*/
 
-/* Render the temperature display screen */
+#define TEMP_THRESHOLD  30.0f   // alert threshold in Celsius (hold sensor to trigger)
+
+static uint8_t temp_alert_flag = 0;  // 1 = currently over threshold
+
 void Show_Temperature_UI(void)
 {
 	float temp = Get_Temperature();
 
 	OLED_ShowImage(0, 0, 16, 16, Return);
-
-	/* Title */
 	OLED_ShowString(20, 0, "Temp", OLED_8X16);
 
-	/* Display integer and decimal parts separately (no %f in OLED_Printf on all compilers) */
-	int16_t t_int  = (int16_t)temp;
-	int16_t t_dec  = (int16_t)((temp - t_int) * 10);
+	int16_t t_int = (int16_t)temp;
+	int16_t t_dec = (int16_t)((temp - t_int) * 10);
 	if (t_dec < 0) t_dec = -t_dec;
 
-	OLED_ShowSignedNum(8,  24, t_int, 3, OLED_12X24);   /* e.g. +026 */
+	OLED_ShowSignedNum(8,  24, t_int, 3, OLED_12X24);
 	OLED_ShowChar(56, 24, '.', OLED_12X24);
-	OLED_ShowNum(68,  24, t_dec, 1, OLED_12X24);         /* one decimal place */
+	OLED_ShowNum(68,  24, t_dec, 1, OLED_12X24);
 	OLED_ShowString(80, 24, "C", OLED_12X24);
+
+	if (temp >= TEMP_THRESHOLD)
+	{
+		OLED_ShowString(4, 48, "! OVER THRESHOLD !", OLED_6X8);
+		if (!temp_alert_flag)
+		{
+			temp_alert_flag = 1;
+			RGB_Red();
+			Buzzer_Alert_Start();
+		}
+	}
+	else
+	{
+		if (temp_alert_flag)
+		{
+			temp_alert_flag = 0;
+			Buzzer_Alert_Stop();
+			RGB_Green();
+		}
+	}
 }
 
-/* Press key3 to exit the temperature page */
 int Temperature(void)
 {
+	temp_alert_flag = 0;
+	Buzzer_Alert_Stop();
+	RGB_Green();
+
 	while (1)
 	{
 		KeyNum = Key_GetNum();
 		if (KeyNum == 3)
 		{
+			Buzzer_Alert_Stop();
+			RGB_Green();
 			OLED_Clear();
 			OLED_Update();
 			return 0;
