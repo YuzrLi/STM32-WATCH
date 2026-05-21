@@ -72,10 +72,6 @@ This project is based on an open-source STM32 watch design found online, modifie
 
 
 
-\*\*Temperature display\*\*
-
-<img width="1280" height="1706" alt="48ff4a5b0389d6fd098f9042dba37e4d" src="https://github.com/user-attachments/assets/f0efe2b9-c458-4cf4-af75-316165bde149" />
-
 
 
 \*\*Main clock\*\*
